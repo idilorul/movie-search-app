@@ -29,9 +29,23 @@ async function fetchMovies(query) {
 
   // Create a paragraph for each movie title and append it to the results container
   data.Search.forEach(function (movie) {
-    const movieTitle = document.createElement("p");
+    const movieCard = document.createElement("div");
+    movieCard.classList.add("movie-card");
+
+    const poster = document.createElement("img");
+
+if (movie.Poster && movie.Poster !== "N/A") {
+  poster.src = movie.Poster;
+} else {
+  poster.src = "https://via.placeholder.com/300x450?text=No+Image";
+}
+
+    const movieTitle = document.createElement("h3");
     movieTitle.textContent = movie.Title;
-    results.appendChild(movieTitle);
+
+    movieCard.appendChild(poster);
+    movieCard.appendChild(movieTitle);
+    results.appendChild(movieCard);
   });
 }
 
