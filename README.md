@@ -1,21 +1,37 @@
-## Latest Update
+## 🎬 Movie Search App
+
+### Tech Stack
+
+* HTML5
+* CSS3
+* Vanilla JavaScript (ES6+)
+* OMDb API
+
+---
 
 ### What I implemented
 
-* Added clickable movie cards to trigger detailed view
-* Implemented second API request using `imdbID` to fetch full movie details
-* Created `showMovieDetails(movie)` to render selected movie data in the UI
-* Added poster fallback handling for missing or invalid images
-* Designed a detailed movie layout with poster + information section
-* Introduced `detail-mode` class to switch layout between grid and detail view
-* Stored last search results using `lastSearchResults`
-* Refactored movie list rendering into reusable `renderMovies(movies)` function
-* Implemented "Back to results" button to restore previous movie list
+* Movie search functionality using the OMDb API
+* Dynamic rendering of movie cards (poster + title)
+* Clickable movie cards with detailed movie view
+* Separate detail view with full movie information
+* Back navigation to previously searched results
+* Search trigger via both button click and Enter key
+* Loading state with animated spinner during API requests
+* Error handling for both "no results" and network/API failures
+* Poster fallback for missing images
+* Data persistence using localStorage (restores last search after refresh)
+
+---
 
 ### What I improved
 
-* Separated data fetching logic from UI rendering (cleaner architecture)
-* Eliminated duplicated rendering logic by introducing a reusable function
-* Improved UI structure with a proper detail layout
-* Enhanced user navigation with back functionality
-* Styled back button for better UX consistency
+* Refactored search logic into a reusable `handleSearch` function
+* Separated rendering logic (`renderMovies`, `showMovieDetails`) for cleaner architecture
+* Implemented state-driven UI updates (based on `lastSearchResults`)
+* Replaced raw API values like "N/A" with user-friendly fallback text
+* Improved UX with disabled button state and dynamic button text ("Searching...")
+* Added loading indicators for both search and detail views
+* Structured error UI into a consistent, styled component
+* Ensured smooth user flow between list view and detail view
+* Optimized user experience with persistent state via localStorage

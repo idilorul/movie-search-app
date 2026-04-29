@@ -191,3 +191,66 @@ h1 {
 .back-btn:hover {
   background-color: #374151;
 }
+
+.no-poster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111827;
+  color: #9ca3af;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.error-message {
+  width: min(90%, 520px);
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background-color: #1f2937;
+  color: #f9fafb;
+  border-radius: 1.25rem;
+  grid-column: 1 / -1;
+}
+
+.error-message h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+}
+
+.error-message p {
+  margin: 0.5rem 0;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loading {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  color: #d1d5db;
+}
+
+.spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #374151;
+  border-top: 4px solid #f9fafb;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
