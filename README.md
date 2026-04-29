@@ -1,3 +1,6 @@
+### 🚀 Live Demo
+https://movie-search-app-idil.netlify.app
+
 ## 🎬 Movie Search App
 
 ### Tech Stack
